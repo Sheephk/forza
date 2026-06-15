@@ -3,409 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="180">
-    <title>Forza Running Club - Internal Summer Challenge 2026</title>
+    <title>無邊框三欄表格</title>
     <style>
-        /* 基礎樣式重設與字型設定 */
         body {
-            font-family: 'Helvetica Neue', Arial, 'Noto Sans TC', sans-serif;
-            background-color: #f4f6f9;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
         }
-
-        /* 看板外框卡片樣式 */
-        .dashboard-container {
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            padding: 30px;
-            max-width: 800px;
+        table {
             width: 100%;
-            text-align: center;
-            box-sizing: border-box;
+            /* 讓欄位寬度平均分配（可視需求調整） */
+            table-layout: fixed; 
+            /* 合併邊框設定，方便徹底隱藏 */
+            border-collapse: collapse; 
+            background-color: #ffffff;
         }
-
-        /* 標題樣式 */
-        h1 {
-            color: #333333;
-            font-size: 24px;
-            margin-top: 0;
-            margin-bottom: 8px;
-        }
-
-        /* 副標題與更新提示 */
-        .subtitle {
-            color: #666666;
-            font-size: 14px;
-            margin-bottom: 24px;
-        }
-
-        /* 圖表容器 */
-        .chart-wrapper {
-            position: relative;
-            overflow: hidden;
-            margin: 0 auto 24px auto;
-            border-radius: 8px;
-            border: 1px solid #e1e4e8;
-            background-color: #fafbfc;
-            display: inline-block;
-            max-width: 100%;
-        }
-
-        iframe {
-            max-width: 100%;
-            display: block;
-        }
-
-        /* 報名人數文字樣式 */
-        .registration-status {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333333;
-            margin: 15px 0;
-        }
-        .registration-status span {
-            color: #dc3545;
-            font-size: 22px;
-            margin-left: 5px;
-        }
-
-        /* 連結按鈕樣式 */
-        .action-button {
-            display: inline-block;
-            background-color: #1a73e8;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-size: 15px;
-            font-weight: bold;
-            margin: 10px 0 20px 0;
-            transition: background-color 0.2s;
-        }
-        .action-button:hover {
-            background-color: #1557b0;
-        }
-
-        /* --- 天氣報告區塊樣式（融合新版動態圖像化風格） --- */
-        .weather-section {
-            border-top: 1px solid #e1e4e8;
-            margin-top: 20px;
-            padding-top: 25px;
+        th, td {
+            /* 移除所有邊框 */
+            border: none; 
+            /* 加上內距，讓字體周圍有留白，比較美觀 */
+            padding: 12px 15px; 
             text-align: left;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
-
-        .weather-section h2 {
-            color: #333333;
-            font-size: 18px;
-            margin-top: 0;
-            margin-bottom: 8px;
-            text-align: center;
-        }
-
-        /* 綠色動態更新時間提示 */
-        .update-time { 
-            text-align: center; 
-            color: #7f8c8d; 
-            font-size: 0.85rem; 
-            margin-bottom: 20px; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
-        }
-        .live-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #2ecc71;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 5px rgba(46, 204, 113, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
-        }
-
-        /* 圖像化大圖示顯示區域 */
-        .main-visual {
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            background: #fafbfc;
-            border: 1px solid #e1e4e8;
-            transition: all 0.3s ease;
-        }
-        /* 當有警告發出時，自動切換為黃橘色調外框 */
-        .main-visual.has-warnings {
-            background: #fff3cd;
-            border-color: #ffeeba;
-        }
-        .icon-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            font-size: 4rem; /* 配合看板比例調整大圖示尺寸 */
-            margin-bottom: 12px;
-            flex-wrap: wrap;
-        }
-        .desc-container {
-            font-size: 15px;
+        th {
+            background-color: #f2f2f2;
             font-weight: bold;
-            color: #333333;
-            line-height: 1.6;
         }
-        .warning-text {
-            color: #d35400;
+        /* 超連結樣式設定，讓它看起來更像可以點擊的連結 */
+        td a {
+            color: #0066cc;
+            text-decoration: underline;
         }
-
-        .weather-section h3 {
-            color: #666666;
-            font-size: 14px;
-            border-bottom: 1px solid #e1e4e8;
-            padding-bottom: 6px;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-
-        /* 數據條目樣式 */
-        .data-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            font-size: 15px;
-            color: #4a5568;
-            border-bottom: 1px dashed #e2e8f0;
-        }
-        .data-item:last-child {
-            border-bottom: none;
-        }
-        .place-name {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .value {
-            font-weight: 600;
-            color: #1a73e8;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .error {
-            color: #dc3545;
-        }
-
-        /* 頁尾提示 */
-        .footer {
-            margin-top: 30px;
-            font-size: 12px;
-            color: #999999;
-            border-top: 1px solid #efefef;
-            padding-top: 15px;
+        td a:hover {
+            color: #003366;
         }
     </style>
 </head>
 <body>
 
-    <div class="dashboard-container">
-        <h1>Forza Running Club - Internal Summer Challenge 2026</h1>
-        <div class="subtitle">此網頁每 3 分鐘會自動重新整理，同步最新數據與天氣報告</div>
+    <h2>Forza Running Club</h2>
 
-        <div class="chart-wrapper">
-            <iframe width="600" height="408" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSHPHvpanr3F-gp6vi61crN7RnwmNLCd5lspzWFWDh7KYcW7iC84Bze-mTs5IUxqraDv2pfwcdY4AZJ/pubchart?oid=374328291&amp;format=image"></iframe>
-        </div>
-
-        <div class="registration-status">
-            報名人數：<span id="sheet-data">讀取中...</span>
-        </div>
-
-        <div>
-            <a href="https://forms.gle/HxjetBBzDFqNnKXT7" target="_blank" class="action-button">開啟報名表單</a>
-        </div>
-
-        <div class="weather-section">
-            <h2>香港即時天氣報告</h2>
-            
-            <div class="update-time">
-                <span class="live-dot"></span>
-                <span id="update-time">正在載入更新時間...</span>
-            </div>
-
-            <div class="main-visual" id="main-visual-box">
-                <div class="icon-container" id="main-icons">⌛</div>
-                <div class="desc-container" id="main-desc">正在獲取最新天氣數據...</div>
-            </div>
-            
-            <div class="data-item">
-                <span class="place-name">💧 本港相對濕度</span>
-                <span id="hk-humidity" class="value">載入中...</span>
-            </div>
-
-            <h3>各區即時氣溫</h3>
-            <div id="regions-container">
-                <div class="data-item"><span style="color:#aaa;">正在獲取地區數據...</span></div>
-            </div>
-        </div>
-
-        <div class="footer">
-            © 2026 數據看板 · 自動更新系統
-        </div>
-    </div>
-
-    <script>
-        // API 網址設定
-        const WEATHER_URL = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=tc';
-        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw2yjswqBw4xIhcU9grGF5hcvRZYmVaQEQ4p3582MqsinMpQ5ZOI_Fr4fAgywQKIwBPJQ/exec"; 
-        
-        // 跑友熱門跑步地區
-        const targetPlaces = ['深水埗', '青衣', '跑馬地', '啟德跑道公園', '沙田'];
-
-        // 獲取網頁 HTML 元素物件
-        const humidityElement = document.getElementById('hk-humidity');
-        const regionsContainer = document.getElementById('regions-container');
-        const sheetDataElement = document.getElementById('sheet-data');
-        const updateTimeEl = document.getElementById('update-time');
-        const mainVisualBox = document.getElementById('main-visual-box');
-        const mainIconsContainer = document.getElementById('main-icons');
-        const mainDescContainer = document.getElementById('main-desc');
-
-        // 天氣警告對應 Emoji 字典
-        const warningEmojiMap = {
-            "雷暴": "⛈️",
-            "酷熱": "🥵",
-            "寒冷": "🥶",
-            "暴雨": "🌧️",
-            "水浸": "🌊",
-            "季候風": "💨",
-            "山泥傾瀉": "⛰️",
-            "火災危險": "🔥",
-            "霜凍": "❄️",
-            "颱風": "🌀",
-            "烈風": "🌀",
-            "暴風": "🌀"
-        };
-
-        // 根據警告字串尋找對應 Emoji
-        function getWarningEmoji(msg) {
-            for (let key in warningEmojiMap) {
-                if (msg.includes(key)) return warningEmojiMap[key];
-            }
-            return "⚠️"; 
-        }
-
-        // 當沒有警告時，根據沙田溫度生成的預設狀態
-        function getGeneralStatus(temp) {
-            if (temp >= 33) return { icon: "☀️", desc: "天氣酷熱" };
-            if (temp >= 28) return { icon: "🌤️", desc: "天氣炎熱" };
-            if (temp <= 12) return { icon: "❄️", desc: "天氣寒冷" };
-            if (temp <= 18) return { icon: "⛅", desc: "天氣清涼" };
-            return { icon: "😊", desc: "今日體感舒適，適合跑步！" };
-        }
-
-        // 核心載入整合函數
-        function initDashboard() {
-            // --- 1. 抓取 Google 試算表報名人數 ---
-            fetch(SCRIPT_URL)
-              .then(response => response.json())
-              .then(data => {
-                sheetDataElement.textContent = data.value;
-              })
-              .catch(error => {
-                console.error("讀取試算表失敗:", error);
-                sheetDataElement.textContent = "讀取失敗";
-              });
-
-            // --- 2. 抓取香港天文台天氣數據 ---
-            fetch(WEATHER_URL)
-              .then(response => response.json())
-              .then(data => {
-                
-                // 更新精確時間文字
-                const now = new Date();
-                const timeString = now.toLocaleTimeString('zh-HK', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-                updateTimeEl.textContent = `${timeString} 已更新`;
-
-                // 處理動態大圖示與狀態 (警告優先邏輯)
-                if (data.warningMessage && data.warningMessage.length > 0) {
-                    mainVisualBox.classList.add('has-warnings');
-                    
-                    let warnings = Array.isArray(data.warningMessage) ? data.warningMessage : [data.warningMessage];
-                    
-                    // 提取並渲染所有正在生效的警告圖示與文字
-                    let iconsHtml = warnings.map(msg => `<span>${getWarningEmoji(msg)}</span>`).join('');
-                    let descHtml = warnings.map(msg => `<div class="warning-text">⚠️ ${msg}</div>`).join('');
-                    
-                    mainIconsContainer.innerHTML = iconsHtml;
-                    mainDescContainer.innerHTML = descHtml;
-                } else {
-                    mainVisualBox.classList.remove('has-warnings');
-                    
-                    // 拿沙田的氣溫當作基準參考
-                    const shatinTemp = data.temperature.data.find(item => item.place === '沙田')?.value || 25;
-                    const status = getGeneralStatus(shatinTemp);
-                    
-                    mainIconsContainer.innerHTML = `<span>${status.icon}</span>`;
-                    mainDescContainer.innerHTML = `<div>${status.desc} (目前並無警告生效)</div>`;
-                }
-
-                // 處理本港相對濕度
-                if (data.humidity && data.humidity.data.length > 0) {
-                    humidityElement.textContent = `${data.humidity.data[0].value}%`;
-                } else {
-                    humidityElement.textContent = '暫無數據';
-                }
-
-                // 處理各區氣溫與對應高低溫 Emoji
-                regionsContainer.innerHTML = '';
-                
-                targetPlaces.forEach(placeName => {
-                    const placeData = data.temperature.data.find(item => item.place === placeName);
-                    const itemDiv = document.createElement('div');
-                    itemDiv.className = 'data-item';
-                    
-                    let tempEmoji = "🌡️";
-                    if (placeData && placeData.value >= 30) tempEmoji = "🥵";
-                    if (placeData && placeData.value <= 15) tempEmoji = "🥶";
-
-                    if (placeData) {
-                        itemDiv.innerHTML = `
-                            <span class="place-name">📍 ${placeName}</span>
-                            <span class="value">${tempEmoji} ${placeData.value}°${placeData.unit}</span>
-                        `;
-                    } else {
-                        itemDiv.innerHTML = `
-                            <span class="place-name">📍 ${placeName}</span>
-                            <span class="value error">無數據</span>
-                        `;
-                    }
-                    regionsContainer.appendChild(itemDiv);
-                });
-
-              })
-              .catch(error => {
-                console.error('讀取天氣 API 失敗:', error);
-                updateTimeEl.textContent = '連線錯誤';
-                mainIconsContainer.innerHTML = '❌';
-                mainDescContainer.innerHTML = '<div class="error">無法載入最新天氣數據</div>';
-                regionsContainer.innerHTML = '<div class="data-item error">無法載入地區天氣數據</div>';
-              });
-        }
-
-        // 頁面加載時立即執行
-        initDashboard();
-    </script>
+    <table>
+        <thead>
+            <tr>
+                <th>☀️ 夏日3K TT挑戰 2026 ☀️</th>
+                <th>FORZA Running Club 2026 會慶</th>
+                <th>天氣報告</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://nimble-cocada-367514.netlify.app/" target="_blank">報名表</a></td>
+                <td>電子產品</td>
+                <td><a href="weather(auto)_5mins.html">分區天氣報告</a></td>
+            </tr>
+            <tr>
+                <td>項目 B</td>
+                <td>辦公用品</td>
+                <td>需預購</td>
+            </tr>
+            <tr>
+                <td>項目 C</td>
+                <td>生活百貨</td>
+                <td>絕版清倉</td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
