@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60">
+    <title>Forza Running Club - Internal Summer Challenge 2026</title>
+    <style>
+        /* 基礎樣式重設與字型設定 */
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Noto Sans TC', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* 看板外框卡片樣式 */
+        .dashboard-container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* 標題樣式 */
+        h1 {
+            color: #333333;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        /* 副標題與更新提示 */
+        .subtitle {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        /* 圖表容器，確保置中與響應式 */
+        .chart-wrapper {
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto 24px auto;
+            border-radius: 8px;
+            border: 1px solid #e1e4e8;
+            background-color: #fafbfc;
+            display: inline-block;
+            max-width: 100%;
+        }
+
+        /* 調整 iframe 在手機板時不會超出螢幕 */
+        iframe {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* 新增：報名人數文字樣式（融入主體風格） */
+        .registration-status {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333333;
+            margin: 15px 0;
+        }
+        .registration-status span {
+            color: #dc3545; /* 保留原本設定的紅色強調 */
+            font-size: 22px;
+            margin-left: 5px;
+        }
+
+        /* 連結按鈕樣式 */
+        .action-button {
+            display: inline-block;
+            background-color: #1a73e8;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 10px 0 20px 0;
+            transition: background-color 0.2s;
+        }
+        .action-button:hover {
+            background-color: #1557b0;
+        }
+
+        /* --- 天氣報告區塊樣式 --- */
+        .weather-section {
+            border-top: 1px solid #e1e4e8;
+            margin-top: 20px;
+            padding-top: 25px;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .weather-section h2 {
+            color: #333333;
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .weather-section h3 {
+            color: #666666;
+            font-size: 14px;
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 6px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* 天氣警告區塊 */
+        .warning-box {
+            background-color: #fafbfc;
+            border-left: 4px solid #cbd5e1;
+            padding: 12px 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #4a5568;
+            transition: all 0.3s ease;
+        }
+
+        /* 當有警告發出時，觸發黃橘色警告色調 */
+        .warning-box.active-warning {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+            font-weight: bold;
+        }
+
+        /* 數據條目樣式 */
+        .data-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            font-size: 15px;
+            color: #4a5568;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .data-item:last-child {
+            border-bottom: none;
+        }
+
+        .value {
+            font-weight: 600;
+            color: #1a73e8;
+        }
+
+        .error {
+            color: #dc3545;
+        }
+
+        /* 頁尾提示 */
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #999999;
+            border-top: 1px solid #efefef;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <h1>Forza Running Club - Internal Summer Challenge 2026</h1>
+        <div class="subtitle">此網頁每 60 秒會自動重新整理，同步最新數據與天氣報告</div>
+
+        <div class="chart-wrapper">
+            <iframe width="600" height="408" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSHPHvpanr3F-gp6vi61crN7RnwmNLCd5lspzWFWDh7KYcW7iC84Bze-mTs5IUxqraDv2pfwcdY4AZJ/pubchart?oid=374328291&amp;format=image"></iframe>
+        </div>
+
+        <div class="registration-status">
+            報名人數：<span id="sheet-data">讀取中...</span>
+        </div>
+
+        <div>
+            <a href="https://forms.gle/HxjetBBzDFqNnKXT7" target="_blank" class="action-button">開啟報名表單</a>
+        </div>
+
+        <div class="weather-section">
+            <h2>香港即時天氣報告</h2>
+            
+            <div class="warning-box" id="warning-box">
+                ⚠️ 警告資訊：<span id="hko-warning">載入中...</span>
+            </div>
+            
+            <div class="data-item">
+                <span>本港相對濕度</span>
+                <span id="hk-humidity" class="value">載入中...</span>
+            </div>
+
+            <h3>各區即時氣溫</h3>
+            <div id="regions-container">
+                <div class="data-item"><span style="color:#aaa;">正在獲取地區數據...</span></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            © 2026 數據看板 · 自動更新系統
+        </div>
+    </div>
+
+    <script>
+        // API 網址設定
+        const WEATHER_URL = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=tc';
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw2yjswqBw4xIhcU9grGF5hcvRZYmVaQEQ4p3582MqsinMpQ5ZOI_Fr4fAgywQKIwBPJQ/exec"; 
+        
+        // 自由調整想查詢的跑友熱門跑步地區
+        const targetPlaces = ['深水埗', '青衣', '跑馬地', '啟德跑道公園', '沙田'];
+
+        // 獲取網頁 HTML 元素物件
+        const humidityElement = document.getElementById('hk-humidity');
+        const warningBox = document.getElementById('warning-box');
+        const warningElement = document.getElementById('hko-warning');
+        const regionsContainer = document.getElementById('regions-container');
+        const sheetDataElement = document.getElementById('sheet-data');
+
+        // --- 1. 抓取 Google 試算表報名人數 ---
+        fetch(SCRIPT_URL)
+          .then(response => response.json())
+          .then(data => {
+            sheetDataElement.textContent = data.value;
+          })
+          .catch(error => {
+            console.error("讀取試算表失敗:", error);
+            sheetDataElement.textContent = "讀取失敗";
+          });
+
+        // --- 2. 抓取香港天文台天氣數據 ---
+        fetch(WEATHER_URL)
+          .then(response => response.json())
+          .then(data => {
+            
+            // 處理天氣警告 (warningMessage)
+            if (data.warningMessage && data.warningMessage.length > 0) {
+              if (Array.isArray(data.warningMessage)) {
+                warningElement.textContent = data.warningMessage.join(' ｜ ');
+              } else {
+                warningElement.textContent = data.warningMessage;
+              }
+              warningBox.classList.add('active-warning');
+            } else {
+              warningElement.textContent = '現時並無警告發出';
+              warningBox.classList.remove('active-warning');
+            }
+
+            // 處理本港相對濕度
+            if (data.humidity && data.humidity.data.length > 0) {
+              humidityElement.textContent = `${data.humidity.data[0].value}%`;
+            } else {
+              humidityElement.textContent = '暫無數據';
+            }
+
+            // 處理多個特定地區的氣溫
+            regionsContainer.innerHTML = '';
+            
+            targetPlaces.forEach(placeName => {
+              const placeData = data.temperature.data.find(item => item.place === placeName);
+              const itemDiv = document.createElement('div');
+              itemDiv.className = 'data-item';
+              
+              if (placeData) {
+                itemDiv.innerHTML = `
+                  <span>${placeName}</span>
+                  <span class="value">${placeData.value}°${placeData.unit}</span>
+                `;
+              } else {
+                itemDiv.innerHTML = `
+                  <span>${placeName}</span>
+                  <span class="value error">無數據</span>
+                `;
+              }
+              regionsContainer.appendChild(itemDiv);
+            });
+
+          })
+          .catch(error => {
+            console.error('讀取天氣 API 失敗:', error);
+            warningElement.textContent = '連線錯誤';
+            humidityElement.textContent = '錯誤';
+            regionsContainer.innerHTML = '<div class="data-item error">無法載入地區天氣數據</div>';
+          });
+    </script>
+
+</body>
+</html>
