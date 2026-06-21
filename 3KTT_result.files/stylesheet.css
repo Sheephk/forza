@@ -72,91 +72,14 @@ td
 	vertical-align:middle;}
 .xl68
 	{mso-style-parent:style0;
-	font-size:16.0pt;
+	font-size:14.0pt;
 	font-family:"Alibaba Sans TC 55 Regular";
 	mso-generic-font-family:auto;
 	mso-font-charset:0;
-	text-align:center;
 	vertical-align:middle;
-	border-top:none;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;}
+	background:#D9D9D9;
+	mso-pattern:black none;}
 .xl69
-	{mso-style-parent:style0;
-	color:black;
-	font-size:16.0pt;
-	font-family:"Alibaba Sans TC 55 Regular";
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	text-align:center;
-	vertical-align:middle;
-	border-top:none;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;}
-.xl70
-	{mso-style-parent:style0;
-	color:black;
-	font-size:14.0pt;
-	font-family:"Alibaba Sans TC 55 Regular";
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;}
-.xl71
-	{mso-style-parent:style0;
-	color:black;
-	font-size:14.0pt;
-	font-family:"Alibaba Sans TC 55 Regular";
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;}
-.xl72
-	{mso-style-parent:style0;
-	font-size:14.0pt;
-	font-family:"Alibaba Sans TC 55 Regular";
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;}
-.xl73
-	{mso-style-parent:style0;
-	color:black;
-	font-size:14.0pt;
-	font-family:"Alibaba Sans HK 55 Regular";
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;}
-.xl74
-	{mso-style-parent:style0;
-	color:black;
-	font-size:14.0pt;
-	font-family:"Alibaba Sans HK 55 Regular";
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;}
-.xl75
 	{mso-style-parent:style0;
 	font-size:20.0pt;
 	font-family:"Alibaba Sans TC 55 Regular";
@@ -164,7 +87,16 @@ td
 	mso-font-charset:0;
 	text-align:center;
 	vertical-align:middle;}
-.xl76
+.xl70
+	{mso-style-parent:style0;
+	color:black;
+	font-size:16.0pt;
+	font-family:"Alibaba Sans TC 55 Regular";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	text-align:center;
+	vertical-align:middle;}
+.xl71
 	{mso-style-parent:style0;
 	color:black;
 	font-size:14.0pt;
@@ -172,108 +104,96 @@ td
 	mso-generic-font-family:auto;
 	mso-font-charset:0;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
+	background:#D9D9D9;
+	mso-pattern:black none;}
+.xl72
+	{mso-style-parent:style0;
+	color:black;
+	font-size:14.0pt;
+	font-family:"Alibaba Sans TC 55 Regular";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	text-align:center;
+	vertical-align:middle;
+	background:#D9D9D9;
+	mso-pattern:black none;}
+.xl73
+	{mso-style-parent:style0;
+	color:black;
+	font-size:14.0pt;
+	font-family:"Alibaba Sans TC 55 Regular";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	vertical-align:middle;}
+.xl74
+	{mso-style-parent:style0;
+	color:black;
+	font-size:14.0pt;
+	font-family:"Alibaba Sans TC 55 Regular";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	text-align:center;
+	vertical-align:middle;}
+.xl75
+	{mso-style-parent:style0;
+	font-size:14.0pt;
+	font-family:"Alibaba Sans HK 55 Regular";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	vertical-align:middle;
+	background:#D9D9D9;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl76
+	{mso-style-parent:style0;
+	font-size:14.0pt;
+	font-family:"Alibaba Sans HK 55 Regular";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	text-align:center;
+	vertical-align:middle;
 	background:#D9D9D9;
 	mso-pattern:black none;}
 .xl77
 	{mso-style-parent:style0;
-	color:black;
-	font-size:14.0pt;
-	font-family:"Alibaba Sans TC 55 Regular";
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
-	background:#D9D9D9;
-	mso-pattern:black none;}
-.xl78
-	{mso-style-parent:style0;
-	font-size:14.0pt;
-	font-family:"Alibaba Sans TC 55 Regular";
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
-	background:#D9D9D9;
-	mso-pattern:black none;}
-.xl79
-	{mso-style-parent:style0;
 	font-size:14.0pt;
 	font-family:"Alibaba Sans HK 55 Regular";
 	mso-generic-font-family:auto;
 	mso-font-charset:0;
+	text-align:center;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
 	background:#D9D9D9;
 	mso-pattern:black none;
 	white-space:normal;}
-.xl80
+.xl78
 	{mso-style-parent:style0;
+	color:black;
+	font-size:14.0pt;
+	font-family:"Alibaba Sans HK 55 Regular";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	vertical-align:middle;}
+.xl79
+	{mso-style-parent:style0;
+	color:black;
 	font-size:14.0pt;
 	font-family:"Alibaba Sans HK 55 Regular";
 	mso-generic-font-family:auto;
 	mso-font-charset:0;
 	text-align:center;
+	vertical-align:middle;}
+.xl80
+	{mso-style-parent:style0;
+	color:black;
+	font-size:14.0pt;
+	font-family:"Alibaba Sans HK 55 Regular";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
 	background:#D9D9D9;
 	mso-pattern:black none;}
 .xl81
 	{mso-style-parent:style0;
-	font-size:14.0pt;
-	font-family:"Alibaba Sans HK 55 Regular";
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
-	background:#D9D9D9;
-	mso-pattern:black none;
-	white-space:normal;}
-.xl82
-	{mso-style-parent:style0;
-	font-size:14.0pt;
-	font-family:"Alibaba Sans TC 55 Regular";
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	vertical-align:middle;
-	background:#D9D9D9;
-	mso-pattern:black none;}
-.xl83
-	{mso-style-parent:style0;
-	color:black;
-	font-size:14.0pt;
-	font-family:"Alibaba Sans HK 55 Regular";
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
-	background:#D9D9D9;
-	mso-pattern:black none;}
-.xl84
-	{mso-style-parent:style0;
 	color:black;
 	font-size:14.0pt;
 	font-family:"Alibaba Sans HK 55 Regular";
@@ -281,9 +201,5 @@ td
 	mso-font-charset:0;
 	text-align:center;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
 	background:#D9D9D9;
 	mso-pattern:black none;}
