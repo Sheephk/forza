@@ -20,38 +20,39 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <script language="JavaScript">
 </script>
 <![endif]><style>
-/* 讓底部控制區滿版並完全置中 */
+/* 讓底部區塊強制撐滿容器並「上下左右完全置中」 */
 body {
     margin: 0;
     padding: 0;
     background: #f8f9fa;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* 填滿底部框架高度 */
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    height: 100vh;           /* 填滿底部框架的高度 */
     box-sizing: border-box;
 }
 
-/* 垂直排列的按鈕容器：寬度調整為全螢幕的 70% */
-.center-button-container {
+/* 按鈕排列控制中心 */
+.center-stack-container {
     display: flex;
-    flex-direction: column;   /* 讓按鈕上下放置 */
-    gap: 12px;                /* 按鈕之間的上下間距 */
-    width: 70%;               /* 強制鎖定為全螢幕寬度的 70% */
+    flex-direction: column;   /* 讓按鈕垂直上下堆疊 */
+    align-items: center;      /* 確保按鈕本身在容器內水平對齊 */
+    gap: 28px;                /* 按鈕彼此之間的上下距離 */
+    width: 100%;              /* 滿版容器 */
 }
 
-/* 手機極大化按鈕樣式 */
+/* 按鈕核心設計：設定為全螢幕的 70% */
 .tab-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 48px;             /* 舒適的手機點擊高度 */
-    width: 100%;              /* 填滿父容器的 70% 寬度 */
+    width: 70%;               /* 🚀 關鍵設定：按鍵加長至全螢幕的 70% */
+    height: 48px;             /* 舒適的手機手指點擊高度 */
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 24px;      /* 圓角藥丸造型 */
+    border-radius: 24px;      /* 圓角藥丸外觀 */
     transition: all 0.2s ease;
     box-sizing: border-box;
     text-align: center;
@@ -64,17 +65,17 @@ body {
     border: 1px solid #ced4da;
 }
 
-/* 已選中狀態（深藍底白字，搭配陰影） */
+/* 已選中狀態（深藍底白字，立體陰影） */
 .tab-active {
     background: #1a73e8;
     color: #ffffff;
-    box-shadow: 0 4px 6px rgba(26,115,232,0.25);
+    box-shadow: 0 4px 10px rgba(26,115,232,0.3);
     border: 1px solid #1a73e8;
 }
 </style>
 </head>
 
-<body class="center-button-container">
+<body class="center-stack-container">
     <a href="3KTT_result.files/sheet001.htm" target="frSheet" id="tab0" class="tab-button tab-active" onclick="window.parent.g_iShCur=0; document.getElementById('tab0').className='tab-button tab-active'; document.getElementById('tab1').className='tab-button tab-inactive';">
         👤 Individual Result
     </a>
