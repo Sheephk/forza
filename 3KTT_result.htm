@@ -33,13 +33,21 @@ body {
     box-sizing: border-box;
 }
 
-/* 按鈕排列控制中心 */
+/* 全中央堆疊容器 */
 .center-stack-container {
     display: flex;
-    flex-direction: column;   /* 讓按鈕垂直上下堆疊 */
-    align-items: center;      /* 確保按鈕本身在容器內水平對齊 */
-    gap: 28px;                /* 按鈕彼此之間的上下距離 */
+    flex-direction: column;   /* 讓內容垂直上下堆疊 */
+    align-items: center;      /* 確保所有子元素水平居中 */
     width: 100%;              /* 滿版容器 */
+}
+
+/* 標題文字樣式 */
+.main-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #202124;
+    margin-bottom: 48px;      /* 與下方按鈕的間距 */
+    text-align: center;       /* 文字置中 */
 }
 
 /* 按鈕核心設計：設定為全螢幕的 70% */
@@ -47,15 +55,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70%;               /* 🚀 關鍵設定：按鍵加長至全螢幕的 70% */
-    height: 48px;             /* 舒適的手機手指點擊高度 */
+    width: 70%;               /* 按鍵加長至全螢幕的 70% */
+    height: 46px;             /* 舒適的手機手指點擊高度 */
     text-decoration: none;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
-    border-radius: 24px;      /* 圓角藥丸外觀 */
+    border-radius: 23px;      /* 圓角藥丸外觀 */
     transition: all 0.2s ease;
     box-sizing: border-box;
     text-align: center;
+    margin-bottom: 10px;      /* 按鈕之間的上下距離 */
 }
 
 /* 未選中狀態（淺灰底黑字） */
@@ -75,13 +84,17 @@ body {
 </style>
 </head>
 
-<body class="center-stack-container">
-    <a href="3KTT_result.files/sheet001.htm" target="frSheet" id="tab0" class="tab-button tab-active" onclick="window.parent.g_iShCur=0; document.getElementById('tab0').className='tab-button tab-active'; document.getElementById('tab1').className='tab-button tab-inactive';">
-        👤 Individual Result
-    </a>
-    
-    <a href="3KTT_result.files/sheet002.htm" target="frSheet" id="tab1" class="tab-button tab-inactive" onclick="window.parent.g_iShCur=1; document.getElementById('tab1').className='tab-button tab-active'; document.getElementById('tab0').className='tab-button tab-inactive';">
-        👥 Group Result
-    </a>
+<body>
+    <div class="center-stack-container">
+        <div class="main-title">☀️ 夏日 3K 挑戰賽 2026 成績 ☀️</div>
+
+        <a href="3KTT_result.files/sheet001.htm" target="frSheet" id="tab0" class="tab-button tab-active" onclick="window.parent.g_iShCur=0; document.getElementById('tab0').className='tab-button tab-active'; document.getElementById('tab1').className='tab-button tab-inactive';">
+            👤 3K TT 個人賽
+        </a>
+        
+        <a href="3KTT_result.files/sheet002.htm" target="frSheet" id="tab1" class="tab-button tab-inactive" onclick="window.parent.g_iShCur=1; document.getElementById('tab1').className='tab-button tab-active'; document.getElementById('tab0').className='tab-button tab-inactive';">
+            👥 隊際接力賽
+        </a>
+    </div>
 </body>
 </html>
