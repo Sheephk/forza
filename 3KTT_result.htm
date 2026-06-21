@@ -1,4 +1,4 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml"
+﻿<html xmlns:v="urn:schemas-microsoft-com:vml"
 xmlns:o="urn:schemas-microsoft-com:office:office"
 xmlns:x="urn:schemas-microsoft-com:office:excel"
 xmlns="http://www.w3.org/TR/REC-html40">
@@ -10,7 +10,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <meta name=Generator content="Microsoft Excel 15">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel=File-List href="3KTT_result.files/filelist.xml">
-<title></title>
+<title>☀️ 夏日 3K 挑戰賽 2026 成績 ☀️</title>
 <![if !supportTabStrip]>
 <link id="shLink" href="3KTT_result.files/sheet001.htm">
 <link id="shLink" href="3KTT_result.files/sheet002.htm">
@@ -20,59 +20,67 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <script language="JavaScript">
 </script>
 <![endif]><style>
-/* ???????????? */
+/* 讓底部控制區滿版並完全置中 */
 body {
     margin: 0;
     padding: 0;
-    background: #f1f3f5;
+    background: #f8f9fa;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-.tab-container {
     display: flex;
-    width: 100%;
-    height: 60px;
-    background: #ffffff;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    padding: 0 10px;
+    height: 100vh; /* 填滿底部框架高度 */
     box-sizing: border-box;
 }
+
+/* 垂直排列的按鈕容器：寬度調整為全螢幕的 70% */
+.center-button-container {
+    display: flex;
+    flex-direction: column;   /* 讓按鈕上下放置 */
+    gap: 12px;                /* 按鈕之間的上下間距 */
+    width: 70%;               /* 強制鎖定為全螢幕寬度的 70% */
+}
+
+/* 手機極大化按鈕樣式 */
 .tab-button {
-    flex: 1;
-    max-width: 45%;
-    height: 46px;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 48px;             /* 舒適的手機點擊高度 */
+    width: 100%;              /* 填滿父容器的 70% 寬度 */
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 23px;
+    border-radius: 24px;      /* 圓角藥丸造型 */
     transition: all 0.2s ease;
     box-sizing: border-box;
     text-align: center;
 }
+
+/* 未選中狀態（淺灰底黑字） */
 .tab-inactive {
     background: #e9ecef;
     color: #495057;
     border: 1px solid #ced4da;
 }
+
+/* 已選中狀態（深藍底白字，搭配陰影） */
 .tab-active {
     background: #1a73e8;
     color: #ffffff;
-    box-shadow: 0 3px 6px rgba(26,115,232,0.3);
+    box-shadow: 0 4px 6px rgba(26,115,232,0.25);
     border: 1px solid #1a73e8;
 }
 </style>
 </head>
-<body class="tab-container">
+
+<body class="center-button-container">
     <a href="3KTT_result.files/sheet001.htm" target="frSheet" id="tab0" class="tab-button tab-active" onclick="window.parent.g_iShCur=0; document.getElementById('tab0').className='tab-button tab-active'; document.getElementById('tab1').className='tab-button tab-inactive';">
-        Individual Result
+        👤 Individual Result
     </a>
     
     <a href="3KTT_result.files/sheet002.htm" target="frSheet" id="tab1" class="tab-button tab-inactive" onclick="window.parent.g_iShCur=1; document.getElementById('tab1').className='tab-button tab-active'; document.getElementById('tab0').className='tab-button tab-inactive';">
-        Group Result
+        👥 Group Result
     </a>
 </body>
 </html>
