@@ -1,8 +1,8 @@
 <xml xmlns:o="urn:schemas-microsoft-com:office:office">
- <o:MainFile HRef="../3KTT_result.html"/>
+ <o:MainFile HRef="../3KTT_result.htm"/>
  <o:File HRef="stylesheet.css"/>
- <o:File HRef="tabstrip.html"/>
- <o:File HRef="sheet001.html"/>
- <o:File HRef="sheet002.html"/>
+ <o:File HRef="tabstrip.htm"/>
+ <o:File HRef="sheet001.htm"/>
+ <o:File HRef="sheet002.htm"/>
  <o:File HRef="filelist.xml"/>
 </xml>
