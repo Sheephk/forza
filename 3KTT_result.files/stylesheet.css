@@ -135,8 +135,9 @@ td
 	vertical-align:middle;}
 .xl75
 	{mso-style-parent:style0;
-	font-size:16.0pt;
-	font-family:"Alibaba Sans TC 55 Regular";
+	color:black;
+	font-size:12.0pt;
+	font-family:"Alibaba Sans HK 55 Regular";
 	mso-generic-font-family:auto;
 	mso-font-charset:0;
 	text-align:center;
@@ -148,8 +149,10 @@ td
 	font-family:"Alibaba Sans HK 55 Regular";
 	mso-generic-font-family:auto;
 	mso-font-charset:0;
+	mso-number-format:"h\:mm\:ss";
 	text-align:center;
-	vertical-align:middle;}
+	vertical-align:middle;
+	white-space:normal;}
 .xl77
 	{mso-style-parent:style0;
 	color:black;
@@ -157,21 +160,39 @@ td
 	font-family:"Alibaba Sans HK 55 Regular";
 	mso-generic-font-family:auto;
 	mso-font-charset:0;
-	mso-number-format:"h\:mm\:ss";
 	text-align:center;
 	vertical-align:middle;
 	white-space:normal;}
 .xl78
 	{mso-style-parent:style0;
 	color:black;
-	font-size:12.0pt;
+	font-size:14.0pt;
+	font-family:"Alibaba Sans TC 55 Regular";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:"h\:mm\:ss";
+	text-align:center;
+	vertical-align:middle;}
+.xl79
+	{mso-style-parent:style0;
+	color:black;
+	font-size:14.0pt;
+	font-family:"Alibaba Sans HK 55 Regular";
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	vertical-align:middle;
+	white-space:normal;}
+.xl80
+	{mso-style-parent:style0;
+	color:black;
+	font-size:14.0pt;
 	font-family:"Alibaba Sans HK 55 Regular";
 	mso-generic-font-family:auto;
 	mso-font-charset:0;
 	text-align:center;
 	vertical-align:middle;
 	white-space:normal;}
-.xl79
+.xl81
 	{mso-style-parent:style0;
 	color:black;
 	font-size:20.0pt;
@@ -180,32 +201,11 @@ td
 	mso-font-charset:0;
 	text-align:center;
 	vertical-align:middle;}
-.xl80
+.xl82
 	{mso-style-parent:style0;
-	color:black;
-	font-size:14.0pt;
+	font-size:16.0pt;
 	font-family:"Alibaba Sans TC 55 Regular";
 	mso-generic-font-family:auto;
 	mso-font-charset:0;
-	mso-number-format:"h\:mm\:ss";
 	text-align:center;
 	vertical-align:middle;}
-.xl81
-	{mso-style-parent:style0;
-	color:black;
-	font-size:14.0pt;
-	font-family:"Alibaba Sans HK 55 Regular";
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	vertical-align:middle;
-	white-space:normal;}
-.xl82
-	{mso-style-parent:style0;
-	color:black;
-	font-size:14.0pt;
-	font-family:"Alibaba Sans HK 55 Regular";
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	text-align:center;
-	vertical-align:middle;
-	white-space:normal;}
